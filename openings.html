@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>체스 오프닝 분석기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>체스 오프닝 분석기</h1>
+    <div class="controls">
+      <a href="index.html"><button>메인 페이지로 돌아가기</button></a>
+      <button id="resetBtn">기록 초기화</button>
+    </div>
+    <div class="legend">알파벳 기보를 하나씩 입력하면 오프닝 이름을 자동으로 찾아줍니다.</div>
+    <div class="opening-ui">
+      <label>수 입력: <input id="moveInput" type="text" placeholder="e4 또는 Nf3" /></label>
+      <button id="addMoveBtn">추가</button>
+      <button id="saveGameBtn">게임 저장</button>
+    </div>
+    <div id="openingInfo" class="legend">현재 오프닝: <strong>아직 기보가 없습니다.</strong></div>
+    <div class="opening-summary">
+      <div><strong>이동 내역</strong></div>
+      <div id="movesDisplay"></div>
+    </div>
+    <div class="opening-summary">
+      <div><strong>매치된 오프닝</strong></div>
+      <div id="matchedOpening">-</div>
+    </div>
+    <div id="serverMessage" class="legend"></div>
+  </div>
+  <script src="openings.js"></script>
+</body>
+</html>
